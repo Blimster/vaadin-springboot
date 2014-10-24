@@ -1,0 +1,8 @@
+@import "../valo/valo.scss";
+
+@mixin custom_valo 
+{
+
+	@include valo;
+		
+}

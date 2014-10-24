@@ -18,7 +18,7 @@ import com.vaadin.ui.Component;
  * @author Oliver Damm
  */
 @SpringUI
-@Theme("valo")
+@Theme("custom_valo")
 public class VaadinSpringBootUi extends SpringVaadinUI
 {
 
