@@ -8,7 +8,9 @@ import net.blimster.vaadinspringboot.base.mvp.View;
 import net.blimster.vaadinspringboot.base.spring.SpringView;
 
 import com.vaadin.ui.Component;
+import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 
 /**
@@ -22,9 +24,14 @@ public class RootViewImpl implements RootView
 
     public RootViewImpl()
     {
+        final TextField textFieldFocusBug = new TextField("Focus Bug");
+
+        final HorizontalLayout layoutWithoutMargin = new HorizontalLayout();
+        layoutWithoutMargin.addComponent(textFieldFocusBug);
+
         this.layoutRoot = new VerticalLayout();
-        this.layoutRoot.setMargin(true);
         this.layoutRoot.addComponent(new Label("Hello, Vaadin + Spring Boot!"));
+        this.layoutRoot.addComponent(layoutWithoutMargin);
     }
 
     @Override
