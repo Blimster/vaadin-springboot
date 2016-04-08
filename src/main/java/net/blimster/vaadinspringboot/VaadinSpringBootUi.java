@@ -4,22 +4,21 @@
  */
 package net.blimster.vaadinspringboot;
 
-import javax.inject.Inject;
-
-import net.blimster.vaadinspringboot.base.spring.SpringUI;
-import net.blimster.vaadinspringboot.base.spring.SpringVaadinUI;
-import net.blimster.vaadinspringboot.ui.root.RootPresenter;
-
 import com.vaadin.annotations.Theme;
 import com.vaadin.server.VaadinRequest;
+import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.Component;
+import com.vaadin.ui.UI;
+import net.blimster.vaadinspringboot.ui.root.RootPresenter;
+
+import javax.inject.Inject;
 
 /**
  * @author Oliver Damm
  */
-@SpringUI
+@SpringUI(path = "")
 @Theme("custom_valo")
-public class VaadinSpringBootUi extends SpringVaadinUI
+public class VaadinSpringBootUi extends UI
 {
 
     private static final long serialVersionUID = 1L;

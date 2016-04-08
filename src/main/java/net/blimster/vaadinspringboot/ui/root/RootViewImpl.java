@@ -4,19 +4,21 @@
  */
 package net.blimster.vaadinspringboot.ui.root;
 
-import net.blimster.vaadinspringboot.base.mvp.View;
-import net.blimster.vaadinspringboot.base.spring.SpringView;
-
 import com.vaadin.ui.Component;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
+import net.blimster.vaadinspringboot.base.mvp.View;
+import org.springframework.context.annotation.Scope;
+
+import javax.inject.Named;
 
 /**
  * @author Oliver Damm
  */
-@SpringView
+@Scope("prototype")
+@Named
 public class RootViewImpl implements RootView
 {
 

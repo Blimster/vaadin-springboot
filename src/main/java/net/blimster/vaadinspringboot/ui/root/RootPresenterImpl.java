@@ -4,16 +4,19 @@
  */
 package net.blimster.vaadinspringboot.ui.root;
 
-import javax.inject.Inject;
-
+import com.vaadin.spring.annotation.UIScope;
 import net.blimster.vaadinspringboot.base.mvp.Presenter;
 import net.blimster.vaadinspringboot.base.mvp.View;
-import net.blimster.vaadinspringboot.base.spring.SpringPresenter;
+import org.springframework.stereotype.Component;
+
+import javax.inject.Inject;
+import javax.inject.Named;
 
 /**
  * @author Oliver Damm
  */
-@SpringPresenter
+@UIScope
+@Named
 public class RootPresenterImpl implements RootPresenter
 {
 
