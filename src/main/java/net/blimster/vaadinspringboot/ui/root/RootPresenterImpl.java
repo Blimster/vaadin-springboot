@@ -7,8 +7,8 @@ package net.blimster.vaadinspringboot.ui.root;
 import com.vaadin.spring.annotation.UIScope;
 import net.blimster.vaadinspringboot.base.mvp.Presenter;
 import net.blimster.vaadinspringboot.base.mvp.View;
-import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 

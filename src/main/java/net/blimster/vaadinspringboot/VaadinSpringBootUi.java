@@ -9,6 +9,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.UI;
+import net.blimster.vaadinspringboot.ui.greet.GreetPresenter;
 import net.blimster.vaadinspringboot.ui.root.RootPresenter;
 
 import javax.inject.Inject;
@@ -26,9 +27,14 @@ public class VaadinSpringBootUi extends UI
     @Inject
     private RootPresenter rootPresenter;
 
+    @Inject
+    private GreetPresenter greetPresenter;
+
     @Override
     protected void init(final VaadinRequest request)
     {
+        rootPresenter.setContent(greetPresenter);
+
         setContent(this.rootPresenter.getView()
                 .getComponent(Component.class));
     }
