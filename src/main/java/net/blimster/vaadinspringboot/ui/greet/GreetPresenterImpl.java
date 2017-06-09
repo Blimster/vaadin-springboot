@@ -37,7 +37,8 @@ public class GreetPresenterImpl implements GreetPresenter, GreetView.Observer
     @Override
     public void textEntered(String text)
     {
-        view.setGreeting(salutationService.getSalutation(text));
+        String salutation = salutationService.getSalutation(text);
+        view.setGreeting(salutation);
     }
 
 }

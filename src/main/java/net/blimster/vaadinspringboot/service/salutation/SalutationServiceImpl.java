@@ -12,7 +12,7 @@ public class SalutationServiceImpl implements SalutationService
     @Override
     public String getSalutation(String name)
     {
-        return "Hello, " + name + "!";
+        return "Hello " + name + "!";
     }
 
 }

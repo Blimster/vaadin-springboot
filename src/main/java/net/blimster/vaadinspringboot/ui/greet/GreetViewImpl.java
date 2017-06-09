@@ -5,6 +5,7 @@ import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.themes.ValoTheme;
 import org.springframework.context.annotation.Scope;
 
 import javax.annotation.PostConstruct;
@@ -29,7 +30,7 @@ public class GreetViewImpl implements GreetView
 
         TextField textField = new TextField();
 
-        Button button = new Button("Ok");
+        Button button = new Button("Greet");
         button.addClickListener((e) -> observer.textEntered(textField.getValue()));
 
         HorizontalLayout horizontalLayout = new HorizontalLayout(textField, button);
